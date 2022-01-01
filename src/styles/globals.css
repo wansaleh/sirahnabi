@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Uthman Naskh';
+  font-display: swap;
+  src: local('KFGQPC Uthman Taha Naskh'),
+    url('https://cdn.rawgit.com/mustafa0x/qpc-fonts/f93bf5f3/various-woff2/UthmanTN1%20Ver10.woff2')
+      format('woff2'),
+    url('https://cdn.rawgit.com/mustafa0x/qpc-fonts/f93bf5f3/various-woff/UthmanTN1%20Ver10.woff')
+      format('woff');
+}
+@font-face {
+  font-family: 'Uthman Naskh';
+  font-display: swap;
+  font-weight: bold;
+  src: local('KFGQPC Uthman Taha Naskh Bold'),
+    local('KFGQPCUthmanTahaNaskh-Bold'),
+    url('https://cdn.rawgit.com/mustafa0x/qpc-fonts/f93bf5f3/various-woff2/UthmanTN1B%20Ver10.woff2')
+      format('woff2'),
+    url('https://cdn.rawgit.com/mustafa0x/qpc-fonts/f93bf5f3/various-woff/UthmanTN1B%20Ver10.woff')
+      format('woff');
+}
+
+html {
+  @apply font-sans;
+  /* font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11'; */
+}
+
+body {
+  @apply dark:bg-black dark:text-white text-black bg-white;
+}
+
+/* h1 {
+  @apply lg:text-6xl text-4xl;
+}
+h2 {
+  @apply lg:text-5xl text-3xl;
+}
+h3 {
+  @apply lg:text-4xl text-2xl;
+} */
+
+@layer base {
+  .layout {
+    @apply px-6 mx-auto max-w-7xl;
+  }
+}
+
+p[lang='ar'] {
+  direction: rtl;
+  font-family: 'Uthman Naskh', sans-serif;
+  font-size: 1.5em;
+  @apply leading-normal tracking-normal;
+  @apply -mb-4 !important;
+}
+
+.prose ol li {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
